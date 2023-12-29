@@ -1,4 +1,4 @@
-var welcomearray = ["Welcome to my page, my name is Maanya"];
+var welcomearray = ["Welcome, my name is Maanya"];
 var textPosition = 0;
 var speed = 100;
 
