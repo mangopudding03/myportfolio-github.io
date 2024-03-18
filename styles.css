@@ -1,68 +1,61 @@
 *{
-    font-family: arial;
+    font-family: cursive;
     color: #99AEAD;
+    width: 100%;
+    height: auto;
 }
 
+.image {
+    position: relative;
+    display: inline-block;
+  }
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .intro {
+    position: absolute;
+    top: 80%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px; 
+  }
+
+  
 #welcome{
     color: white;
-    font-size: 40;
-    text-align: left;
+    font-size: 50;
+    text-align: center;
+    
 }
 
 #secondlnarr{
     color: #C4CDC1;
-    font-size: 20;
-    text-align: left;
-}
-
-
-
-body{
-    padding: 25;
-    margin: 25;
+    font-size: 30;
     text-align: center;
-    /* background-color: #28363D */
-    background-color: black;
+    }
+
+    
+     
+.Section{
+    padding-top:5rem;
+    padding-bottom: 10rem;
+    padding-left: 10rem;
+    background: black;
 }
 
-.navbar ul{
-   list-style-type: none; 
-   padding: 10px;
-}
-
-.navbar a{
-    text-decoration: none;
+.carousel-item{
     display: block;
-    text-align: left;
-    color: #45ffca;
+    width: 100%;
+    height: auto;
 }
 
-.navbar li{
-    float: left;
-    padding: 10px;
-    text-align: left;
-    margin: 20px;
-}
-
-h1{
-    color: #C4CDC1 ;
-}
-
-
-.intro p{
-    text-align: justify;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-right: 100;
-    padding-left: 100;
-
-}
-
-.PageHD{
-    color: #70f7d1;
-    padding-bottom: 60;
-    padding-top: 30;
+.SectionTitle{
+    font: 50;
+    text-align: center;
+    color: yellow;
 }
 
 .PageFormat p{
@@ -70,11 +63,6 @@ h1{
     padding-left: 40;
     text-align: left;
 }
-
-.PageFormat ul{
-    padding-left: 100;
-}
-
 .PageFormat h3{
     font-size: 25;
     color: #C4CDC1;
@@ -85,3 +73,4 @@ h1{
 .PageFormat li{
     text-align: left;
 }
+
