@@ -1,25 +1,55 @@
-var welcomearray = ['Maanya Naveen'];
-var secondlnarr = ['Computer Science major @ The University of Cincinnati'];
+var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
 
+TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-var textPosition = 0;
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
 
-var speed = 100;
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-typewriter = () => {
-    document.querySelector("#welcome").
-    innerHTML = welcomearray[0].substring(0, textPosition)
+    var that = this;
+    var delta = 200 - Math.random() * 100;
 
-    document.querySelector("#secondlnarr").
-    innerHTML = secondlnarr[0].substring(0, textPosition)
+    if (this.isDeleting) { delta /= 2; }
 
-    if (textPosition++ !=  welcomearray[0].length)
-        setTimeout(typewriter, speed);
-    
-    else if(textPosition++ !=  secondlnarr[0].length)
-        setTimeout(typewriter, speed);
-}
+    if (!this.isDeleting && this.txt === fullTxt) {
+        if (this.toRotate.length === 1) {
+            // Stop deleting if it's static text
+            return;
+        }
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
 
+    setTimeout(function () {
+        that.tick();
+    }, delta);
+};
 
-
-window.addEventListener("load", typewriter);
+window.onload = function () {
+    var elements = document.querySelectorAll('.typewrite, .typewrite-static');
+    elements.forEach(function (element) {
+        var toRotate = element.getAttribute('data-type');
+        var period = element.getAttribute('data-period');
+        if (toRotate) {
+            new TxtType(element, JSON.parse(toRotate), period);
+        }
+    });
+};

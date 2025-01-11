@@ -5,111 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Ojuju:wght@700&display=swap" rel="stylesheet">  
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <title>Maanya Naveen</title>
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- <nav class="navbar">
-        <ul class="ms-auto">
-            <li> <a href="Work.html"> Work</a> </li>
-            <li> <a href="Projects.html">Projects </a></li>
-            <li> <a href="ExtraCirricular.html"> ExtraCirriculars</a> </li>
-        </ul>
-    </nav>  -->
-
-    <section class="ISection">
-        <div class="image">
-            <img src="portfolio.jpg" alt="">
+    <section class="Section">
+        <div class="container-intro">
             <div class="intro">
-                <h1 id = "welcome"></h1>
-                <h1 id = "secondlnarr"></h1>
-                <!-- <p> I am a third year student at the University of Cincinnati. 
-                    I major in Computer Science with a minor in Economics.
-                    I am working towards my certficates in Software Engineering and Cyber Operations. 
-                    In my free time, I like to watch tv shows and workout!
-                </p> -->
+                <!-- Typewriter for "Hi, I'm Maanya" -->
+                <h1>
+                    <a href="#" class="typewrite-static" data-period="2000" data-type='["Hey, Im Maanya"]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h1>
             </div>
+            <div class="rintro">
+                <!-- Typewriter for dynamic content -->
+                <h2>
+                    <a href="#" class="typewrite" data-period="2000" data-type='[" 4th year @ The University of Cincinnati", "B.S. and M.Eng in Computer Science"]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h2> 
+            </div>
+        </div> 
+        
+        <div class="container end">
+            <a href="AboutMe.html">
+                <button class="btn"><span class="glowing-txt">About Me</span></button>
+            </a>
+            <a href="Education.html">
+                <button class="btn"><span class="glowing-txt">Education</span></button>
+            </a>
+            <a href="Internships.html">
+                <button class="btn"><span class="glowing-txt">Internships</span></button>
+            </a>
         </div>
+    </section>
+
+    <section class="Section">
         
     </section>
-    
-    <section class="Section">
-        <div class="SectionTitle">
-            <h1>Internships</h1>
-        </div>
-            <div class="PageFormat">
-                <h3>Paycor | Product Operations and Development Intern</h3>
-                <p>May 2023 - August 2023</p>
-                <ul>
-                    <li>Analyzed data and created dashboards in Azure DevOps, providing fiscal year metrics to 
-                        stakeholders.</li>
-                    <li> Developed efficient practice standards and documentation on various technologies for 
-                        teams under Enterprise IT, incorporating SDLC concepts.</li>
-                </ul>
-                <h3>Fischer Homes | IS Application Support Administrator</h3>
-                <p>Jan 2023 - April 2023</p>
-                <ul>
-                    <li>Designed reports in SSRS and dashboards in PowerBI, utilizing SQL queries for data 
-                        extraction.</li>
-                    <li>Maintained software applications by regularly inspecting ticketing software and reporting 
-                        bugs.</li>
-                    <li>Improved user experience on the Fischer Homes website by collaborating with the 
-                        marketing team.</li>
-                </ul>
-            </div>
-    </section>
-    
-    <section class="Section">
-        <div class="SectionTitle">
-            <h1>Work</h1>
-        </div>
-            <div class = "PageFormat">
-                <h3>University of Cincinnati | Admissions Student Ambassador</h3>
-                <p>August 2023 - Present</p>
-                <ul>
-                    <li>Assigned tours for students and families who want to visit our campus</li>
-                    <li>Stuffed folders and bags with UC swag for students when they visit our campus events</li>
-                </ul>
-                
-                <h3>Mason BIC | Teacher</h3>
-                    <p>Sep 2022 - Jan 2023</p>
-                <ul>
-                    <li>Graded Homeworks, Classworks, Practice Packets and Tests</li>
-                    <li>Taught K-6 kids English and Math.</li>
-                    <li>Helped pre-schoolers identify objects and helped with pronounciation and handwriting</li>
-                </ul>
-                <h3>Numerade | Tutor</h3>
-                <p>June 2022 - Sep 2022</p>
-                <ul>
-                    <li> Created and uploaded solutions to students' questions</li>
-                    <li>Tutored Calculus and Algebra to high schoolers virtually</li>
-                    <li>Solved textbook questions for students</li>
-                </ul>
-                <h3>Kings Island | Arcade Attendant</h3>
-                <p>May 2022 - Aug 2022</p>
-                <ul>
-                    <li>Facilitated game card sales and redeemed tickets for customers</li>
-                    <li>Resolved game issues when needed</li>
-                    <li>Initiated stocking of prizes, merch and equipment.</li>
-                    <li>Maintained an overall safe and positive environment.</li>
-                </ul>
-            </div>
-       
-    </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
     <script src="index.js"></script>
 </body>
-
-
-
-
 </html>

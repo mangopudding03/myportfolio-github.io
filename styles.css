@@ -1,90 +1,283 @@
 *{
-    color: #99AEAD;
     width: 100%;
-    height: auto;
-    font: Arial;
+    font-family: 'Courier New', Courier, monospace;
+    overscroll-behavior: none;
+    height: fit-content;
 }
 
-.image {
-    position: relative;
-    display: inline-block;
-  }
-
-.image img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .intro {
-    position: absolute;
-    top: 80%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    padding: 10px 20px; 
-  }
-
-  
-#welcome{
-    color: white;
-    font-size: 50;
-    text-align: center;
-    
-    font-family: "Frijole", system-ui;
-    font-weight: 400;
-    font-style: normal;
-      
-    
+h2{
+  color: #92f5ff;
+  font-size: 15px;
+  padding: 4%;
 }
 
-#secondlnarr{
-    color: #C4CDC1;
-    font-size: 30;
-    text-align: center;
-    font-family: "Ojuju", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    }
-
-.ISection{
-    padding-bottom: 5REM;
-    background-color: BLACK;
-}
-     
 .Section{
-    padding-bottom: 5REM;
-    padding-left: 10rem;
-    background: black;
-}
-
-.carousel-item{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.SectionTitle{
-    font: 50;
+    align-items: center;
     text-align: center;
-    color: yellow;
-    font-family: "Ojuju", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    padding: 5%;
+    background-color: black;
+    
+    /* #3f3f3f */
 }
 
-.PageFormat p{
-    color: #c8fdee;
-    padding-left: 40;
-    text-align: left;
+
+
+
+
+.container-intro{
+    white-space: nowrap;
+    padding: 120px;
 }
-.PageFormat h3{
-    font-size: 25;
-    font-optical-sizing: auto;
-    color: #C4CDC1;
-    text-align: left;
-    padding-top: 40;
+  .intro {
+    color: #92f5ff;
+    font-weight: 400;
+  }
+  .rintro{
+    color: #fce5ff;
+    font-weight: 300;
+}  
+
+  .typewrite, .typewrite-static {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes the color inherit from the parent element */
 }
 
-.PageFormat li{
-    text-align: left;
+/* Add this to your styles.css */
+.container.end {
+    display: inline-flex;
+    position: absolute;
+    bottom: 50px; 
+    transform: translateX(-50%);
+}
+
+
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--glow-color);
+  cursor: pointer;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  font-size: 10px;
+  font-weight: 200;
+  letter-spacing: 1em;
+  max-width: 200px;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  text-align: center;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+
+.col{
+  max-height: fit-content;
+  max-width: fit-content;
+}
+
+
+
+.card{
+  background-color: black;
+  border-color: #92f5ff;
+  border-radius: 3%;
+}
+
+.card-title{
+  color: #92f5ff;
+}
+
+.card-text{
+  color: #fce5ff;
+}
+
+.project-title{
+  color: #ffffc1;
+}
+
+.IntTitle{
+  color: #ffffc1;
+  font-size: 20px;
+}
+.JobTitle{
+  color: #fce5ff;
+  font-size: 16px;
+}
+
+.dates{
+  font-size: 14px;
+  color:#92f5ff;
+}
+
+.JobText{
+  color: aliceblue;
+  font-size: 14px;
+  padding-left: 4%;
+  padding-right: 4%;
+
+}
+
+.part1{
+  padding-bottom: 10%;
+}
+
+.aboutme1{
+  width: 300px;
+  height: 400px;
+  float: left;
+  background-color: black;
+}
+
+.part1text{
+  padding-left: 35%;
+  padding-top: 10%;
+  align-items: center;
+  color: #92f5ff;
+  background-color: black;
+}
+
+.part2{
+  padding-top: 20%;
+}
+
+.aboutme2{
+  width: 300px;
+  height: 400px;
+  float: right;
+  background-color: black;
+}
+
+.part2text{
+  padding-right: 35%;
+  padding-top: 10%;
+  align-items: center;
+  color: #92f5ff;
+  background-color: black;
+}
+
+.part3{
+  padding-top: 25%;
+  padding-bottom: 30%;
+}
+
+.aboutme3{
+  width: 300px;
+  height: 400px;
+  float: left;
+  background-color: black;
+}
+
+.part3text{
+  padding-left: 35%;
+  padding-top: 10%;
+  align-items: center;
+  color: #92f5ff;
+  background-color: black;
 }
 

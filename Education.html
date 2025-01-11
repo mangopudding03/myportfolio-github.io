@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <title> My Education!</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="Section">  
+        <h2 class="summary">I'm currently dual enrolled in an Accelerated Engineering Degree (ACCEND) program so I will 
+            graduating with both my Bachelors and Masters in Computer Science on May 2026. Through these programs, I have gained immense
+            knowledge about the theory and practical usages in Computer Science. Personally, I am incredibly fond of classes that allow me to utilize the skills learnt in class.
+            Here is a list of courses that I have found benficial throughout my academic career!
+        </h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Engineering Design and Thinking</h5>
+                      <h6 class="project-title">Prototype Mover Robot</h6>
+                      <p class="card-text">
+                        A year long class where we tailored a LEGO EV3 robot in <b>Python</b> to be a part of a mobile processing plant that replicated the movements of an ant, enabling it to identify various materials in disasterous areas and sort them into designated bins so it can be covert debris into renewable energy source.
+                        The robot utilized Proportional-Integral-Derivative (PID) control to navigate challenging terrains and accurately follow both continuous and dashed curved paths using sensors and actuators.
+                        Our team was among the few to successfully reach the final track of 30m in both semesters.
+                      </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Database Design and Analysis</h5>
+                      <h6 class="project-title">Generic Shopping Application</h6>
+                      <p class="card-text">
+                        In this class, we applied our theoretical knowledge of databases to develop a generic shopping application using <b>PostgreSQL and Flask</b> that includes a login page, items with pictures and prices, search button to browse and filter
+                        items by category, adding the items or remove them from their shopping cart and place orders. All of which updates synchronously on the database. 
+                        Additionally, we designed a separate interface for employees to manage inventory in warehouses, edit product information, view orders, and perform other administrative tasks by logging into their portals.
+                      </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Computer Networks</h5>
+                      <h6 class="project-title">Public Bulletin Board System</h6>
+                      <p class="card-text">Through this class, I implemented a client-server bulletin board system using raw socket programming in <b>Python.</b> utilizing its <b>threading</b> library for each its users processes. 
+                        I created a public message board where users could connect to a server and join a public group. After joining, users can post and join multiple private groups. The server kept track of all connected users, notifying everyone when a user joined or left. 
+                        Users can retrieve messages through unique messageID and the messages of a private group can only be visible to its users.
+                        Users can only view the last two messages sent in the group to avoid congestion. 
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Parallel Computing</h5>
+                    <p class="card-text">A graduate-level course through which I learnt computational thinking and practical programming skills needed to achieve terascale and petascale computing performance.
+                        I had the opportunity to experiment with various parallel algorithmic design patterns through Pitzer OSC (Ohio Super Computer) for high performance computing in <b>CUDA C code and Python.</b> 
+                        These resources gave me an oppurtunity to practice different programming
+                        models to analyze data and shared communication with different
+                        processors to measure its effectiveness in parallel computation.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Programming Languages</h5>
+                      <h6 class="project-title">STIMPL</h6>
+                      <p class="card-text"> In this class was to develop a Turing-complete imperative programming language called STIMPL that extends <b>Python.</b> 
+                        We were provided with a shell code to implement the evaluation of various expressions such as literals, variable assignments, mathematical operations, logical conditions, and control flow constructs.
+                        On top of that, I managed a program state using a 'State' class to track variable types and values. The implementation required handling error cases, raising exceptions for type mismatches and syntax violations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Intelligent Data Analysis</h5>
+                      <p class="card-text">This is one of the first graduate classes I took which gave me immense knowledge about <b>data classification, clustering techniques, ensemble learning algorithms and association analysis</b> by allowing me to implement them 
+                        on real-life datasets. Mainly utilized <b>Python's Machine Learning libraries such as sklearn, numpy, pandas, etc.</b> to extract, evaluate and model data to measure the accuracies and precision of the classification techniques. 
+                        This class amplified my love for data science and was one of the major reasons why I wanted to pursue a concentration in Data Science.                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
